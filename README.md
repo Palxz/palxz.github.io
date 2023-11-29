@@ -30,8 +30,8 @@ Lorem ipsum dolor sit amet. Qui eaque exercitationem qui repellendus voluptas ab
 ## Amet
 
 Lorem ipsum dolor sit amet. Qui eaque exercitationem qui repellendus voluptas ab modi delectus quo quia sint et **explicabo sint**. Sit maiores debitis et magni Quis ut impedit itaque At dolorem autem. Ut iure **optio** ut sint itaque et minus accusantium et repellendus illo.
-> $X_n = X_{x-1} \cdot q \quad ,\forall n\in\mathbb N$ \n
-> $X_n = X_0 \cdot q^n \quad ,\forall n\in\mathbb N$ \n
+> $X_n = X_{x-1} \cdot q \quad ,\forall n\in\mathbb N$ \
+> $X_n = X_0 \cdot q^n \quad ,\forall n\in\mathbb N$ \
 > $$
-\Delta V = \frac{\Delta r}{\Delta t} \n
+\Delta V = \frac{\Delta r}{\Delta t} \
 > $$ [LaTeX](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
