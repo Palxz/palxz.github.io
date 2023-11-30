@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family:"monocraft" ;
     src: url(assets/Monocraft.woff) format('woff');
@@ -34,4 +35,6 @@ body > test > button {
 body > test > button:hover {
     background-color: rgba(255, 255, 255, .9);  
 }
+=======
+>>>>>>> 753eec0b60a93d7cefa7be1c088d17c899b5f9be
 
