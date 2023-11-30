@@ -1,0 +1,37 @@
+@font-face {
+    font-family:"monocraft" ;
+    src: url(assets/Monocraft.woff) format('woff');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to left,#c0d884,#54f5b7);
+}
+
+body > test {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+body > test > button {
+    min-height: 10vh;
+    min-width: 10vh;
+    cursor: pointer;
+    font-size: medium;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+body > test > button {
+    color: black;
+    font-family: monocraft; 
+}
+
+body > test > button:hover {
+    background-color: rgba(255, 255, 255, .9);  
+}
+
