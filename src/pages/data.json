@@ -1,0 +1,12 @@
+{
+    "projects":[  
+        {"displayName":"MinePack Tools","href":"https://palxz.github.io/MinePack-Tools", "type": null},
+        {"displayName":"Project","href":"test", "type": null}
+    ]
+    ,
+    "updates":[
+        {"displayName":"Added \"DatedText\" lol","href": null,"date":"December 8, 2023", "type":"Dated"},
+        {"displayName":"New project \"Project\" added.","href": null,"date":"December 7, 2023", "type":"Dated"}
+    ]
+   
+}

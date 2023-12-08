@@ -1,0 +1,112 @@
+@font-face {
+    font-family:"monocraft" ;
+    src: url(../assets/Monocraft.woff) format('woff');
+}
+
+:root{
+    --background-1: #1b1b1b;
+    --background-2: #252525;
+    --background-3: #222222;
+    --background-4: #3d3d3d;
+    --background-5: #383838;
+    --background-6: #575757;
+    --text-1: #ffffff;
+    --text-2: #dcdcdc;
+    --text-3: #c3c3c3;
+}
+
+
+body {
+    font-family: monocraft;
+    padding: 0;
+    margin: 0;
+    /* background: linear-gradient(to left,#c0d884,#54f5b7); */
+    /* background-color:var(--background-1); */
+    background: radial-gradient(var(--background-2), var(--background-1));
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: var(--text-2)
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+
+}
+
+/*Here comes the classes oh boy*/
+
+header {
+    background-color: var(--background-2);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.content-boxes {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#projects, #updates {
+    background-color: var(--background-4);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 45%;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Toolbar */
+
+.toolbar {
+    position: fixed;
+    background-color: var(--background-2)   ;
+    height: 10vh;
+    width: 100%;
+}
+
+.sidemenu-button-container {
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    min-height: 10vh;
+    min-width: 10vh;
+
+}

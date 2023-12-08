@@ -1,0 +1,23 @@
+Project Format
+    {"displayName":"{Displayed Text}","href":"{Displayed Text}","date": null , "type": null}
+
+Updates Format.
+    {"displayName":"{Displayed Text}","href":"[Displayed Text]","date": "[{Month} {Day}, {Year}]" ,"type":"{types}"}
+
+#Months are in letters
+#Days are in numbers
+#TypeSheet:
+|=============================================|
+|-  Type  -   DisplayName   -  href  -  date  |
+|=============================================|
+|- Strong - "displayedText" -  null  -  null  |
+|- Linked - "displayedText" - "href" -  null  |
+|- Dated  - "displayedText" -  null  - "date" |
+|=============================================|
+#{Required}
+#[Required Dependant]
+
+PlaceHolders:
+
+    {"displayName":"LinkedText","href":"google.com","date": "November 3, 2023" ,"type":"Linked"},
+    {"displayName":"StrongText","href": null,"date": null, "type":"Strong"},
