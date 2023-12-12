@@ -1,79 +1,81 @@
-// Function that generates html compatible string.
-// You feed it data and type
-// name = Displayed Text.
-// href = Link opened on click.
-// type = Project, update-strong, update-linked or update-dated
-// date = Date in format "{Month} {Day}, {Year}"
-function generateItemHTML(name, href, type, date) {
-  //define the output
+// Magic.js
+import {loadJSON} from "./classes/json-tools.js";
+/**
+ * Generate HTML compatible string based on the provided data and type.
+ * @param {string} name - The displayed text.
+ * @param {string} type - The type of the item: 'project', 'update-strong', 'update-linked', or 'update-dated'.
+ * @param {object} data - The additional data object.
+ * @param {string} data.href - The link opened on click.
+ * @param {string} data.date - The date in the format "{Month} {Day}, {Year}".
+ * @returns {string} - The generated HTML string.
+ */
+function generateItemHTML(name, type, data) {
+  // If data is null, initialize it as an empty object.
+  if (data == null) {
+    data = {};
+  }
+
+  // Get the href and date values from the data object, or use default values if they are null.
+  let href = data.href || "there is a null href";
+  let date = data.date || "there is a null date";
+  let img = data.img || "https://placehold.co/1280x720";
+
+  // Generate HTML based on the type of the item
+  let project = `<li class="centered-parent"><a href="${href}"><img class="project-image" src="${img}"><p class="centered image-button-text --text-4">${name}</p></a></li>`;
+  let updateStrong = `<li><a href="${href}}" target="_blank"><strong>${name}</strong></a></li>`;
+  let updateLinked = `<li><a href="${href}">${name}</a></li>`;
+  let updateDated = `<li href="${href}"><strong>${date}</strong> - ${name}</li>`;
+
   let html = '';
-  //switch statement for the type of list
+
+  // Determine the appropriate HTML based on the type.
   switch (type) {
-    //If its a project
     case 'project':
-      html = `<li><a href="${href}">${name}</a></li>`;
+      html = project;
       break;
-    //If its a update filter by type
     case 'update-strong':
-      html = `<li><strong>${name}</strong></li>`;
+      html = updateStrong;
       break;
     case 'update-linked':
-      html = '<li><a href="${href}">'+ name +'</a></li>';
+      html = updateLinked;
       break;
     case 'update-dated':
-      html = '<li href='+href+'><strong>'+ date +'</strong> - '+ name +'</li>';
+      html = updateDated;
       break;
     default:
-      html = '<a>Invalid Type</a>'
-      console.log("Invalid Type");
-    break;
+      html = '<a>Invalid Type</a>';
+      break;
   }
-  //return the patched html
+
   return html;
 }
-  //Get the JSON File and make it into an object
 
-  import { loadJSON } from "./classes/json-tools.js";
-  const data = await loadJSON('./src/pages/data.json');
+// Load JSON data from file.
+const jsonData = await loadJSON('./src/pages/data.json');
 
-  console.log("JSON Resolved");
+let projects = [];
+// Iterate through each project in the JSON data.
+for (let i = 0; i < Object.keys(jsonData.projects).length; i++) {
+  const {displayName, type ,data} = jsonData.projects[i];
+  // Push generated HTML for the project into the projects array.
+  projects.push(generateItemHTML(displayName, "project", data))
+}
 
-  //Decode the json into HTML Lines
+let updates = [];
+// Iterate through each update in the JSON data.
+for (let i = 0; i < Object.keys(jsonData.updates).length; i++) {
+  const {displayName, type, data} = jsonData.updates[i];
+  // Push generated HTML for the update into the updates array.
+  updates.push(generateItemHTML(displayName, "update-" + type.toLowerCase(), data))
+}
 
-  let projects = [];
+const projectsList = document.getElementById('project-list');
+const updatesList = document.getElementById('update-list');
 
-  for (let i = 0; i < Object.keys(data.projects).length; i++) {
-    const {displayName, href} = data.projects[i];
-    // console.log(JSON.stringify(displayName));
-    // console.log(JSON.stringify(href));
-    // console.log(`displayName: ${displayName}, href: ${href}`);
-    // let dataHTML = generateItemHTML(displayName,href,"project");
-    projects.push(generateItemHTML(displayName,href,"project"))
-  }
-
-  let updates = [];
-
-  for (let i = 0; i < Object.keys(data.updates).length; i++) {
-    const {displayName, href, type, date} = data.updates[i];
-    // console.log(JSON.stringify(displayName));
-    // console.log(JSON.stringify(href));
-    // console.log(`displayName: ${displayName}, href: ${href}`);
-    updates.push(generateItemHTML(displayName,href,"update-" + type.toLowerCase(),date))
-  }
-
-  //add HTML Lines to the HTML Feed
-
-  const projectsList = document.getElementById('project-list');
-  const updatesList = document.getElementById('update-list');
-
-  for (let i = 0; i < projects.length; i++) {
-    projectsList.innerHTML += projects[i];
-  }
-
-  for (let i = 0; i < updates.length; i++) {
-    updatesList.innerHTML += updates[i];
-  }
-
+// Insert the generated HTML for the projects into the projectsList element.
+projectsList.insertAdjacentHTML('beforeend', projects.join(''));
+// Insert the generated HTML for the updates into the updatesList element.
+updatesList.insertAdjacentHTML('beforeend', updates.join(''));
 
 
 

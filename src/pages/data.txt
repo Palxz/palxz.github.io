@@ -1,23 +1,32 @@
 Project Format
-    {"displayName":"{Displayed Text}","href":"{Displayed Text}","date": null , "type": null}
+    {"displayName":"{Displayed Text}","type": "Project" ,"data":{data}}
 
 Updates Format.
-    {"displayName":"{Displayed Text}","href":"[Displayed Text]","date": "[{Month} {Day}, {Year}]" ,"type":"{types}"}
+    {"displayName":"{Displayed Text}","type":"{types}", "data":{data}}
 
 #Months are in letters
 #Days are in numbers
 #TypeSheet:
-|=============================================|
-|-  Type  -   DisplayName   -  href  -  date  |
-|=============================================|
-|- Strong - "displayedText" -  null  -  null  |
-|- Linked - "displayedText" - "href" -  null  |
-|- Dated  - "displayedText" -  null  - "date" |
-|=============================================|
-#{Required}
-#[Required Dependant]
+|  Type   |   DisplayName   |  data  |
+|    -    |        -        |    -   |
+| Project | "displayedText" | {data} |
+| Strong  | "displayedText" | {data} |
+| Linked  | "displayedText" | {data} |
+| Dated   | "displayedText" | {data} |
 
-PlaceHolders:
+#DataSheet :
 
-    {"displayName":"LinkedText","href":"google.com","date": "November 3, 2023" ,"type":"Linked"},
-    {"displayName":"StrongText","href": null,"date": null, "type":"Strong"},
+ |  Type   |   HREF   |  Date |
+ |    -    |    -     |   -   |
+ | Project |    ✓     |   X   |
+ | Strong  |    X     |   ✓   |
+ | Linked  |    X     |   ✓   |
+ | Dated   |    X     |   ✓   |
+
+
+PlaceHolders :
+    {"displayName":"LinkedText","type":"Linked","data": {"href":"google.com","date":"November 3, 2023"}},
+    {"displayName":"StrongText", "type":"Strong","data": {"href": null,"date": null} }
+
+
+{"displayName";{Text},"type":{type},"data":{"href": {href},"date": {date} } }

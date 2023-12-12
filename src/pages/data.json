@@ -1,12 +1,57 @@
 {
-    "projects":[  
-        {"displayName":"MinePack Tools","href":"https://palxz.github.io/MinePack-Tools", "type": null},
-        {"displayName":"Project","href":"test", "type": null}
+    "projects": 
+    [
+      {
+        "displayName": "",
+        "href": "https://palxz.github.io/MinePack-Tools",
+        "type": "project",
+        "data": {
+          "href": "https://palxz.github.io/MinePack-Tools",
+          "img": "../assets/minepacktools.png"
+        }
+      }
+      ,
+      {
+        "displayName": "",
+        "href": "test",
+        "type": "project",
+        "data": {
+          "href": "https://www.youtube.com/watch?v=sq6oc066w14",
+          "img": "../assets/EpicoText.png"
+        }
+      }
     ]
     ,
-    "updates":[
-        {"displayName":"Added \"DatedText\" lol","href": null,"date":"December 8, 2023", "type":"Dated"},
-        {"displayName":"New project \"Project\" added.","href": null,"date":"December 7, 2023", "type":"Dated"}
+    "updates": 
+    [
+      {
+        "displayName": "Added \"DatedText\" lol",
+        "href": null,
+        "date": "December 8, 2023",
+        "type": "Dated",
+        "data": {
+          "date": "December 8, 2023"
+        }
+      }
+      ,
+      {
+        "displayName": "New project \"Project\" added.",
+        "href": null,
+        "date": "December 7, 2023",
+        "type": "Dated",
+        "data": {
+          "date": "December 7, 2023"
+        }
+      }
+      ,
+      {
+        "displayName": "Me comi una papa :D",
+        "href": null,
+        "date": "December 11, 2023",
+        "type": "Dated",
+        "data": {
+          "date": "December 11, 2023"
+        }
+      }
     ]
-   
-}
+  }

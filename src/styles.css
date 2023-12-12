@@ -1,9 +1,11 @@
+/* Define font face for Monocraft font */
 @font-face {
-    font-family:"monocraft" ;
+    font-family: "Monocraft";
     src: url(../assets/Monocraft.woff) format('woff');
 }
 
-:root{
+/* Define color variables */
+:root {
     --background-1: #1b1b1b;
     --background-2: #252525;
     --background-3: #222222;
@@ -13,100 +15,129 @@
     --text-1: #ffffff;
     --text-2: #dcdcdc;
     --text-3: #c3c3c3;
+    --text-4: #383838;
 }
 
-
+/* Set default styles for body */
 body {
-    font-family: monocraft;
+    font-family: "Monocraft"; /* Use Monocraft font */
     padding: 0;
     margin: 0;
-    /* background: linear-gradient(to left,#c0d884,#54f5b7); */
-    /* background-color:var(--background-1); */
-    background: radial-gradient(var(--background-2), var(--background-1));
+    background: radial-gradient(var(--background-2), var(--background-1)); /* Set radial background gradient */
     background-position: center;
     background-size: cover;
     height: 100vh;
-    color: var(--text-2)
+    color: var(--text-2);
 }
 
-.container {
-    height: 100%;
-    width: 100%;
-
-}
-
-/*Here comes the classes oh boy*/
-
+/* Styling for header */
 header {
     background-color: var(--background-2);
     padding: 20px;
     text-align: center;
 }
 
+/* Styling for h1 */
 h1 {
     font-size: 2em;
     margin: 0;
 }
 
+/* Styling for p */
+p {
+    margin: 0;
+}
+
+/* Styling for img */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+/* Styling for main */
 main {
     padding: 20px;
 }
 
-.content-boxes {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 960px;
-}
-
-#projects, #updates {
-    background-color: var(--background-4);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    width: 45%;
-}
-
+/* Styling for h2 */
 h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
+/* Styling for ul */
 ul {
     list-style: none;
     padding: 0;
 }
 
-li {
-    margin-bottom: 5px;
-}
-
+/* Styling for a */
 a {
-    color: #eee;
+    color: var(--text-1);
     text-decoration: none;
 }
 
+/* Styling for a:hover */
 a:hover {
     text-decoration: underline;
 }
 
+/* Projects and Updates */
 
+/* Styling for content boxes */
+.content-boxes {
+    width: 100vh;
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 30px;
+}
 
-/* Toolbar */
-
-.toolbar {
-    position: fixed;
-    background-color: var(--background-2)   ;
-    height: 10vh;
+/* Styling for grid items */
+.grid-item {
+    background-color: var(--background-4);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     width: 100%;
 }
 
-.sidemenu-button-container {
-    display: grid;
-    justify-content: left;
-    align-items: center;
-    min-height: 10vh;
-    min-width: 10vh;
+/* Styling for projects grid item */
+#projects {
+    grid-column: span 2;
+}
 
+/* Styling for updates grid item */
+#updates {
+    grid-column: span 1;
+}
+
+/* Styling for project list grid */
+#project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: auto;
+}
+
+/* Styling for image button container text */
+.image-button-text {
+    text-align: center;
+}
+
+/* Styling for project image */
+.project-image {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.project-image:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3)
 }
