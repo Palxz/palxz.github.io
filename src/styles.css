@@ -64,7 +64,8 @@ main {
 /* Styling for h2 */
 h2 {
     font-size: 1.5em;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 /* Styling for ul */
@@ -86,8 +87,8 @@ a:hover {
 
 /* Projects and Updates */
 
-/* Styling for content boxes */
-.content-boxes {
+/* Styling for the tab wrapper */
+.tab-wrapper {
     width: 100vh;
     height: 70vh;
     display: grid;
@@ -99,8 +100,8 @@ a:hover {
 }
 
 /* Styling for grid items */
-.grid-item {
-    background-color: var(--background-4);
+.tab-container {
+    background-color: var(--background-2);
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -140,4 +141,8 @@ a:hover {
 
 .project-image:hover{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3)
+}
+
+.centered {
+    text-align: center;
 }
