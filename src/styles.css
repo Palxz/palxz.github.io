@@ -35,6 +35,7 @@ header {
     background-color: var(--background-2);
     padding: 20px;
     text-align: center;
+    box-shadow: #00000050 0 0 10px;
 }
 
 /* Styling for h1 */
@@ -85,7 +86,9 @@ a:hover {
     text-decoration: underline;
 }
 
+
 /* Projects and Updates */
+
 
 /* Styling for the tab wrapper */
 .tab-wrapper {
@@ -145,4 +148,10 @@ a:hover {
 
 .centered {
     text-align: center;
+}
+
+.dated {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }

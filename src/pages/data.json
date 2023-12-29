@@ -45,12 +45,21 @@
       }
       ,
       {
-        "displayName": "Me comi una papa :D",
+        "displayName": "Me comì una papa :D",
         "href": null,
         "date": "December 11, 2023",
         "type": "Dated",
         "data": {
           "date": "December 11, 2023"
+        }
+      },
+      {
+        "displayName": "Splitgate juegazo la verdad.",
+        "href": null,
+        "date": "December 17, 2023",
+        "type": "Dated",
+        "data": {
+          "date": "December 17, 2023"
         }
       }
     ]

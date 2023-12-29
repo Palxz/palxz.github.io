@@ -24,7 +24,7 @@ function generateItemHTML(name, type, data) {
   let project = `<li class="centered-parent"><a href="${href}"><img class="project-image" src="${img}"><p class="centered image-button-text --text-4">${name}</p></a></li>`;
   let updateStrong = `<li><a href="${href}}" target="_blank"><strong>${name}</strong></a></li>`;
   let updateLinked = `<li><a href="${href}">${name}</a></li>`;
-  let updateDated = `<li href="${href}"><strong>${date}</strong> - ${name}</li>`;
+  let updateDated = `<li href="${href}" class="dated" style="margin-bottom: 5px;"><strong>${date}</strong><br>- ${name}</br></li>`;
 
   let html = '';
 
